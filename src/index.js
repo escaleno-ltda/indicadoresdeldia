@@ -21,7 +21,7 @@ module.exports = () => {
           const result = {
             date: new Date(
               data.date.replace(
-                /\d{4}-d{2}-d{2} d{2}:d{2}:d{2}/, '$1-$2-$3T$4:$5:$6')).toISOString(),
+                /\d{4}-d{2}-d{2} d{2}:d{2}:d{2}/, '$1-$2-$3T$4:$5:$6-03:00')).toISOString(),
             holy: {
               yesterday: data.santoral.ayer,
               today: data.santoral.hoy,
