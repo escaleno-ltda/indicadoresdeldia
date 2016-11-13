@@ -1,6 +1,6 @@
 {
   "name": "indicadoresdeldia",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Obtener indicadores del dia desde indicadoresdeldia.cl",
   "main": "src",
   "scripts": {
