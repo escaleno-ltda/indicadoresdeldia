@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "4"
+  - "6"
+  - "7"
+notifications:
+  email: false
+after_success:
+  - npm run coveralls
+  - npm run codeclimate
