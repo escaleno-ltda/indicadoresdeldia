@@ -36,7 +36,7 @@ module.exports = () => {
             restriction: {
               normal: {
                 today: data.restriccion.normal,
-                tomorrow: data.restriccion.normal_maniana,
+                tomorrow: data.restriccion.normal_maniana
               },
               catalitic: data.restriccion.catalitico
             }
