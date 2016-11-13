@@ -1,3 +1,9 @@
+#### 0.0.3 (2016-11-13)
+
+##### Bug Fixes
+
+* **date:** Fix date pattern ([19b12925](https://github.com/lgaticaq/indicadoresdeldia/commit/19b12925b97e37f2da239b87c0531b3584379d2f))
+
 #### 0.0.2 (2016-11-13)
 
 ##### Chores
