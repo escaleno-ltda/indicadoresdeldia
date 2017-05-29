@@ -35,7 +35,7 @@
   "homepage": "https://github.com/lgaticaq/indicadoresdeldia#readme",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.0",
     "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.15",
     "eslint": "^3.10.0",
