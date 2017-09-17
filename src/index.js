@@ -3,7 +3,7 @@
 const http = require('http');
 
 const parseAmount = data => {
-  return parseFloat(data.replace(/[\$\.]/g, '').replace(',', '.'));
+  return parseFloat(data.replace(/[$.]/g, '').replace(',', '.'));
 };
 
 module.exports = () => {
