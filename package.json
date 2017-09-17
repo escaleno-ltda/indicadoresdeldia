@@ -4,16 +4,17 @@
   "description": "Obtener indicadores del dia desde indicadoresdeldia.cl",
   "main": "src",
   "scripts": {
-    "pretest": "eslint .",
-    "test": "istanbul cover _mocha",
-    "coveralls": "coveralls < coverage/lcov.info",
-    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info",
+    "lint": "eslint --fix 'src/**/*.js' 'test/**/*.js'",
+    "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
+    "pretest": "npm run lint -s && npm run format -s",
+    "test": "mocha",
+    "posttest": "istanbul report text-summary lcov",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "repository": {
     "type": "git",
@@ -36,39 +37,32 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "4.1.2",
-    "codeclimate-test-reporter": "0.5.0",
-    "coveralls": "2.13.1",
     "eslint": "4.7.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
     "generate-changelog": "1.4.0",
     "istanbul": "0.4.5",
     "mocha": "3.5.3",
-    "nock": "9.0.14"
+    "nock": "9.0.14",
+    "prettier-standard": "6.0.0"
   },
   "eslintConfig": {
+    "extends": "standard",
     "env": {
-      "es6": true,
-      "node": true,
       "mocha": true
     },
-    "extends": "eslint:recommended",
     "rules": {
-      "indent": [
-        2,
-        2
-      ],
-      "linebreak-style": [
-        2,
-        "unix"
-      ],
-      "quotes": [
-        2,
-        "single"
-      ],
-      "semi": [
-        2,
-        "always"
+      "no-console": [
+        "error"
       ]
     }
   },
+  "eslintIgnore": [
+    "coverage",
+    "example.js"
+  ],
   "tonicExampleFilename": "example.js"
 }
