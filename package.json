@@ -47,7 +47,7 @@
     "istanbul": "0.4.5",
     "mocha": "3.5.3",
     "nock": "9.0.21",
-    "prettier-standard": "6.0.0"
+    "prettier-standard": "7.0.1"
   },
   "eslintConfig": {
     "extends": "standard",
